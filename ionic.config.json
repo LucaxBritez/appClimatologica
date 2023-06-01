@@ -1,0 +1,7 @@
+{
+  "name": "appClimatologica",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
