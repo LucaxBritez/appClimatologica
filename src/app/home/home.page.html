@@ -1,20 +1,22 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Blank
+      Weather App
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div class="ion-padding">
+    <ion-item>
+      <ion-input [(ngModel)]="city" placeholder="Enter city"></ion-input>
+    </ion-item>
+    <ion-button expand="full" (click)="getWeather()">Get Weather</ion-button>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div *ngIf="weatherData" class="weather-info">
+      <h2>{{ weatherData.name }}</h2>
+      <p>Temperature: {{ weatherData.main.temp }}°C</p>
+      <p>Description: {{ weatherData.weather[0].description }}</p>
+    </div>
   </div>
 </ion-content>
