@@ -1,22 +1,35 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Weather App
+      <div class = "container-tittle">
+      App Clima
+      </div>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
+  
+<div class="container">
+  <div class="componente">
+    <div class="ion-padding">
     <ion-item>
-      <ion-input [(ngModel)]="city" placeholder="Enter city"></ion-input>
-    </ion-item>
-    <ion-button expand="full" (click)="getWeather()">Get Weather</ion-button>
+      <ion-label position="floating" class="texto-centrado">Ingrese nombre de la ciudad</ion-label>
+      <ion-input [(ngModel)]="city"></ion-input>
 
+    </ion-item>
+
+    <div class="container">
+      <div class = "componente-boton">
+    <ion-button expand="full" (click)="getWeather()">Obtener clima</ion-button>
+      </div>
+    </div>
     <div *ngIf="weatherData" class="weather-info">
       <h2>{{ weatherData.name }}</h2>
-      <p>Temperature: {{ weatherData.main.temp }}°C</p>
-      <p>Description: {{ weatherData.weather[0].description }}</p>
+      <p>Temperatura: {{ weatherData.main.temp }}°C</p>
+      <p>Descripcion: {{ weatherData.weather[0].description }}</p>
+      </div>
     </div>
   </div>
+</div>
 </ion-content>

@@ -2,3 +2,33 @@
   margin-top: 20px;
   text-align: center;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  height: 20vh; /* Ajusta la altura según tus necesidades */
+}
+
+.texto-centrado {
+  text-align: center;
+}
+
+
+.container-tittle {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  font-size: 60px; /* Tamaño de la fuente */
+  font-weight: bold; /* Negrita */
+}
+
+.componente {
+  width: 60%; /* Ancho del componente al 100% del contenedor */
+  max-width: 100%; /* Máximo ancho del componente al 100% del contenedor */
+}
+
+.componente-boton {
+  width: 40%; /* Ancho del componente al 100% del contenedor */
+  max-width: 100%; /* Máximo ancho del componente al 100% del contenedor */
+}
